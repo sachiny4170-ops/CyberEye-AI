@@ -7,7 +7,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+
   preview: {
+    host: '0.0.0.0',
     allowedHosts: ['cybereye-ai-frontend.onrender.com'],
   },
 })
