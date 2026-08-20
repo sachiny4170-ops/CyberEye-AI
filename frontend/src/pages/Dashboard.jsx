@@ -177,8 +177,6 @@ function Dashboard() {
             className="mt-12"
           >
 
-            {/* Result Heading */}
-
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
 
               <div>
@@ -204,9 +202,7 @@ function Dashboard() {
 
             </div>
 
-            {/* =================================================
-                SCORE CARDS
-            ================================================= */}
+            {/* SCORE CARDS */}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
@@ -272,9 +268,7 @@ function Dashboard() {
 
             </div>
 
-            {/* =================================================
-                WEBSITE INFORMATION
-            ================================================= */}
+            {/* WEBSITE INFORMATION */}
 
             <div className="mt-8 bg-slate-900 border border-slate-800 rounded-2xl p-6">
 
@@ -317,9 +311,7 @@ function Dashboard() {
 
             </div>
 
-            {/* =================================================
-                SSL/TLS
-            ================================================= */}
+            {/* SSL/TLS */}
 
             <div className="mt-6 bg-slate-900 border border-slate-800 rounded-2xl p-6">
 
@@ -372,9 +364,7 @@ function Dashboard() {
 
             </div>
 
-            {/* =================================================
-                SECURITY HEADERS
-            ================================================= */}
+            {/* SECURITY HEADERS */}
 
             <div className="mt-6 bg-slate-900 border border-slate-800 rounded-2xl p-6">
 
@@ -432,9 +422,7 @@ function Dashboard() {
 
             </div>
 
-            {/* =================================================
-                RECOMMENDATIONS
-            ================================================= */}
+            {/* RECOMMENDATIONS */}
 
             <div className="mt-6 bg-slate-900 border border-slate-800 rounded-2xl p-6">
 
@@ -469,9 +457,7 @@ function Dashboard() {
 
             </div>
 
-            {/* =================================================
-                PORT ASSESSMENT
-            ================================================= */}
+            {/* PORT ASSESSMENT */}
 
             <div className="mt-6 bg-slate-900 border border-slate-800 rounded-2xl p-6">
 
@@ -530,6 +516,8 @@ function Dashboard() {
 
           <div className="max-w-5xl mx-auto">
 
+            {/* PROJECT ABOUT */}
+
             <div className="text-center">
 
               <span className="text-cyan-400 text-sm font-semibold uppercase tracking-wider">
@@ -549,7 +537,7 @@ function Dashboard() {
 
             </div>
 
-            {/* Project Description */}
+            {/* PROJECT DESCRIPTION */}
 
             <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
 
@@ -573,6 +561,8 @@ function Dashboard() {
                 </p>
 
               </div>
+
+              {/* TECHNOLOGY STACK */}
 
               <div className="bg-slate-800/60 rounded-2xl p-6 border border-slate-700">
 
@@ -608,7 +598,7 @@ function Dashboard() {
 
             </div>
 
-            {/* Features */}
+            {/* KEY FEATURES */}
 
             <div className="mt-6">
 
@@ -676,7 +666,49 @@ function Dashboard() {
                 Cyber Security Student
               </p>
 
-              {/* Social Links */}
+              {/* ABOUT ME */}
+
+              <div className="max-w-2xl mx-auto mt-6 bg-slate-800/60 border border-slate-700 rounded-2xl p-6">
+
+                <h4 className="text-xl font-semibold text-white">
+                  👨‍💻 About Me
+                </h4>
+
+                <p className="text-gray-400 mt-4 leading-7">
+                  I'm Sachin Yadav, a B.Tech Computer Science &
+                  Engineering student at SR Group of Institutions
+                  (SRGI), Lucknow.
+                </p>
+
+                <p className="text-gray-400 mt-3 leading-7">
+                  I am interested in Cyber Security, Ethical Hacking,
+                  Web Security, Vulnerability Assessment and
+                  Network Security.
+                </p>
+
+                <div className="mt-5 flex flex-wrap justify-center gap-3">
+
+                  <span className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-gray-300">
+                    🎓 B.Tech CSE
+                  </span>
+
+                  <span className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-gray-300">
+                    🔐 Cyber Security
+                  </span>
+
+                  <span className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-gray-300">
+                    🌐 Web Security
+                  </span>
+
+                  <span className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-sm text-gray-300">
+                    🛡️ Ethical Hacking
+                  </span>
+
+                </div>
+
+              </div>
+
+              {/* SOCIAL LINKS */}
 
               <div className="flex flex-wrap justify-center gap-3 mt-6">
 
@@ -725,6 +757,22 @@ function Dashboard() {
           </div>
 
         </section>
+
+        {/* =====================================================
+            FOOTER
+        ===================================================== */}
+
+        <footer className="mt-16 py-8 border-t border-slate-800 text-center">
+
+          <p className="text-gray-500 text-sm">
+            CyberEye AI • Intelligent Security Assessment Platform
+          </p>
+
+          <p className="text-gray-600 text-xs mt-2">
+            Developed by Sachin Yadav • Cyber Security Student
+          </p>
+
+        </footer>
 
       </main>
     </div>
