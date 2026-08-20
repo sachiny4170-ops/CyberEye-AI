@@ -693,6 +693,43 @@ function Dashboard() {
               <p className="text-cyan-400 mt-1">
                 Cyber Security Student
               </p>
+              <div className="flex flex-wrap justify-center gap-3 mt-6">
+
+  <a
+    href="https://www.linkedin.com/in/sachinyadav-cse"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-blue-400 hover:border-blue-400 transition"
+  >
+    🔗 LinkedIn
+  </a>
+
+  <a
+    href="https://github.com/sachiny4170-ops"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-gray-300 hover:border-gray-400 transition"
+  >
+    💻 GitHub
+  </a>
+
+  <a
+    href="https://www.instagram.com/sachin_yadav_5125"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-pink-400 hover:border-pink-400 transition"
+  >
+    📸 Instagram
+  </a>
+
+  <a
+    href="mailto:sachiny4170@gmail.com"
+    className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-cyan-400 hover:border-cyan-400 transition"
+  >
+    📧 Email
+  </a>
+
+</div>
 
               <p className="text-gray-500 text-sm mt-3">
                 CyberEye AI • Intelligent Security Assessment Platform
