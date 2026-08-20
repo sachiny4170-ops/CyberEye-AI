@@ -30,13 +30,10 @@ function Dashboard() {
       setResult(res.data);
 
       setTimeout(() => {
-        document
-          .getElementById("results")
-          ?.scrollIntoView({
-            behavior: "smooth",
-          });
+        document.getElementById("results")?.scrollIntoView({
+          behavior: "smooth",
+        });
       }, 100);
-
     } catch (error) {
       console.error("Scan error:", error);
 
@@ -71,9 +68,7 @@ function Dashboard() {
   };
 
   const getHeaderClass = (value) => {
-    return value
-      ? "text-green-400"
-      : "text-red-400";
+    return value ? "text-green-400" : "text-red-400";
   };
 
   return (
@@ -91,7 +86,6 @@ function Dashboard() {
         id="scanner"
         className="max-w-7xl mx-auto px-6 py-12"
       >
-
         <div className="text-center max-w-4xl mx-auto">
 
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm mb-6">
@@ -149,9 +143,7 @@ function Dashboard() {
                 type="text"
                 placeholder="google.com"
                 value={url}
-                onChange={(e) =>
-                  setUrl(e.target.value)
-                }
+                onChange={(e) => setUrl(e.target.value)}
                 onKeyDown={handleKeyDown}
                 className="flex-1 p-4 rounded-xl bg-slate-800 border border-slate-700 outline-none focus:border-cyan-500 transition text-white placeholder-gray-500"
               />
@@ -161,9 +153,7 @@ function Dashboard() {
                 disabled={loading}
                 className="px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed font-semibold transition"
               >
-                {loading
-                  ? "Scanning..."
-                  : "🔍 Scan Website"}
+                {loading ? "Scanning..." : "🔍 Scan Website"}
               </button>
 
             </div>
@@ -206,9 +196,7 @@ function Dashboard() {
               </div>
 
               <button
-                onClick={() =>
-                  generateSecurityReport(result)
-                }
+                onClick={() => generateSecurityReport(result)}
                 className="px-6 py-3 rounded-xl border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 transition font-semibold"
               >
                 📄 Export PDF
@@ -322,9 +310,7 @@ function Dashboard() {
 
                 <InfoCard
                   title="Content Type"
-                  value={
-                    result.content_type ?? "Unknown"
-                  }
+                  value={result.content_type ?? "Unknown"}
                 />
 
               </div>
@@ -371,16 +357,14 @@ function Dashboard() {
                 <InfoCard
                   title="Expiry"
                   value={
-                    result.ssl_certificate
-                      ?.expiry_date ?? "N/A"
+                    result.ssl_certificate?.expiry_date ?? "N/A"
                   }
                 />
 
                 <InfoCard
                   title="Days Remaining"
                   value={
-                    result.ssl_certificate
-                      ?.days_remaining ?? "N/A"
+                    result.ssl_certificate?.days_remaining ?? "N/A"
                   }
                 />
 
@@ -461,22 +445,20 @@ function Dashboard() {
               {result.recommendations?.length > 0 ? (
                 <div className="space-y-3">
 
-                  {result.recommendations.map(
-                    (item, index) => (
-                      <div
-                        key={index}
-                        className="flex gap-3 items-start p-4 rounded-xl bg-red-500/5 border border-red-500/10"
-                      >
-                        <span className="text-orange-400">
-                          ⚠️
-                        </span>
+                  {result.recommendations.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex gap-3 items-start p-4 rounded-xl bg-red-500/5 border border-red-500/10"
+                    >
+                      <span className="text-orange-400">
+                        ⚠️
+                      </span>
 
-                        <p className="text-gray-300">
-                          {item}
-                        </p>
-                      </div>
-                    )
-                  )}
+                      <p className="text-gray-300">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
 
                 </div>
               ) : (
@@ -499,38 +481,36 @@ function Dashboard() {
 
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
 
-                {result.open_ports?.map(
-                  (item, index) => (
-                    <div
-                      key={index}
-                      className="bg-slate-800 rounded-xl p-4"
-                    >
+                {result.open_ports?.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-slate-800 rounded-xl p-4"
+                  >
 
-                      <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center">
 
-                        <span className="text-lg font-bold">
-                          {item.port}
-                        </span>
+                      <span className="text-lg font-bold">
+                        {item.port}
+                      </span>
 
-                        <span
-                          className={
-                            item.status === "Open"
-                              ? "text-orange-400 text-xs"
-                              : "text-green-400 text-xs"
-                          }
-                        >
-                          {item.status}
-                        </span>
-
-                      </div>
-
-                      <p className="text-gray-500 text-sm mt-2">
-                        {item.service}
-                      </p>
+                      <span
+                        className={
+                          item.status === "Open"
+                            ? "text-orange-400 text-xs"
+                            : "text-green-400 text-xs"
+                        }
+                      >
+                        {item.status}
+                      </span>
 
                     </div>
-                  )
-                )}
+
+                    <p className="text-gray-500 text-sm mt-2">
+                      {item.service}
+                    </p>
+
+                  </div>
+                ))}
 
               </div>
 
@@ -678,7 +658,9 @@ function Dashboard() {
 
             </div>
 
-            {/* Developer */}
+            {/* =====================================================
+                DEVELOPER SECTION
+            ===================================================== */}
 
             <div className="mt-10 pt-8 border-t border-slate-700 text-center">
 
@@ -693,45 +675,48 @@ function Dashboard() {
               <p className="text-cyan-400 mt-1">
                 Cyber Security Student
               </p>
+
+              {/* Social Links */}
+
               <div className="flex flex-wrap justify-center gap-3 mt-6">
 
-  <a
-    href="https://www.linkedin.com/in/sachinyadav-cse"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-blue-400 hover:border-blue-400 transition"
-  >
-    🔗 LinkedIn
-  </a>
+                <a
+                  href="https://www.linkedin.com/in/sachinyadav-cse"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-blue-400 hover:border-blue-400 transition"
+                >
+                  🔗 LinkedIn
+                </a>
 
-  <a
-    href="https://github.com/sachiny4170-ops"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-gray-300 hover:border-gray-400 transition"
-  >
-    💻 GitHub
-  </a>
+                <a
+                  href="https://github.com/sachiny4170-ops"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-gray-300 hover:border-gray-400 transition"
+                >
+                  💻 GitHub
+                </a>
 
-  <a
-    href="https://www.instagram.com/sachin_yadav_5125"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-pink-400 hover:border-pink-400 transition"
-  >
-    📸 Instagram
-  </a>
+                <a
+                  href="https://www.instagram.com/sachin_yadav_5125"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-pink-400 hover:border-pink-400 transition"
+                >
+                  📸 Instagram
+                </a>
 
-  <a
-    href="mailto:sachiny4170@gmail.com"
-    className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-cyan-400 hover:border-cyan-400 transition"
-  >
-    📧 Email
-  </a>
+                <a
+                  href="mailto:sachiny4170@gmail.com"
+                  className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-cyan-400 hover:border-cyan-400 transition"
+                >
+                  📧 Email
+                </a>
 
-</div>
+              </div>
 
-              <p className="text-gray-500 text-sm mt-3">
+              <p className="text-gray-500 text-sm mt-4">
                 CyberEye AI • Intelligent Security Assessment Platform
               </p>
 
@@ -740,22 +725,6 @@ function Dashboard() {
           </div>
 
         </section>
-
-        {/* =====================================================
-            FOOTER
-        ===================================================== */}
-
-        <footer className="mt-16 py-8 border-t border-slate-800 text-center">
-
-          <p className="text-gray-500 text-sm">
-            CyberEye AI • Intelligent Security Assessment Platform
-          </p>
-
-          <p className="text-gray-600 text-xs mt-2">
-            Developed by Sachin Yadav • Cyber Security Student
-          </p>
-
-        </footer>
 
       </main>
     </div>
@@ -804,6 +773,7 @@ function HeaderCard({
     <div className="bg-slate-800 rounded-xl p-4 flex items-center justify-between gap-4">
 
       <div>
+
         <p className="text-gray-300 text-sm font-medium">
           {title}
         </p>
@@ -811,6 +781,7 @@ function HeaderCard({
         <p className="text-gray-600 text-xs mt-1">
           HTTP Security Header
         </p>
+
       </div>
 
       <div
